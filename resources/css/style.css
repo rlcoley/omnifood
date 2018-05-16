@@ -1,0 +1,667 @@
+/* 0to255.com and Bootflat colorpicker */
+
+/* 
+  Orange colors: #dd9530;  #F5AB35;   #cf6d17; 
+  Blue colorrs:  #317589;  #245563;
+*/
+
+
+/* ----------------------------------------- */
+/* BASIC SETUP */
+/* ------------------------------------------ */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: #fff;
+/*     color: #dd9530; */
+    font-family: 'Lato','Airl', sans-serif;
+    font-weight: 300px;
+    font-size: 20px;
+    text-rendering: optimizelegibility;
+    
+}
+
+.clearfix {zoom: 1}
+.clearfix:after{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/* ----------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ------------------------------------------ */
+
+
+.row{
+    max-width: 1140px;  
+    margin: 0 auto;
+}
+
+
+section{
+    padding: 80px 0;
+    
+}
+
+.box{
+    padding: 1%;
+}
+
+
+h1,
+h2,
+h3{ 
+    /*   tutorial code (optional)   */
+/*     font-weight: 300; */
+/*     text-transform: uppercase; */
+    letter-spacing: 1px;
+}
+
+h1{
+    margin-top: 0
+    margin-bottom: 10px;
+    color: #dd9530;
+    font-size: 200%;
+    word-spacing: 4px;
+
+}
+
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3{
+    font-weight: 300;
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after{
+    display: block;
+    height: 2px;
+    background-color: #F5AB35;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+
+.section-steps h2, 
+.section-features, 
+.section-features h2,
+.section-cities,
+.section-cities h2,
+.section-testimonials h2,
+.section-plans h2,
+.section-plans,
+.section-steps,
+blockquote,
+.section-form h2,
+.section-form,
+.section-form input,
+.section-form select,
+.section-form textarea,
+.footer-nav, 
+.social-icons,
+footer p
+{
+    font-weight: 20;
+}
+
+/* --------PARAGRAPHS---------- */
+
+.long-copy{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 40px;
+}
+
+
+.box p{
+    font-size: 90%;
+    line-height: 145%;
+}
+
+/* --------ICONS---------- */
+
+.icon-big{
+    font-size: 220%;
+    display: block;
+    color: #F5AB35;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.icon-small{
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #F5AB35;
+    font-size: 120%;
+    text-align: center;
+    color: #F5AB35;
+    font-size: 120%;
+    
+/*     secrets to align text and icons */
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+
+
+/* --------LINKS---------- */
+
+
+a.twitter{
+    color: #F5AB35;
+    text-decoration: none;
+    border-bottom: 1px solid #F5AB35;
+    padding-bottom: 6px;
+    transition: border-bottom 0.5s, color, 0.5s;
+}
+
+
+/* a:link,
+a:active {
+    color: #F5AB35;
+    text-decoration: none;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #F5AB35;
+    transition: border-bottom 0.5s, color, 0.5s;
+} */
+
+a:hover,
+a:active{
+    color:#555;
+    border-bottom: 1px solid transparent;
+    
+}
+
+
+/* --------BUTTONS---------- */
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 200px;
+    background-color: #317589;
+    color: #F5AB35;
+    transition: background-color 0.5s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    margin-right: 15px;
+/*     background-color: #317589;
+    color: #F5AB35; */
+        /*   tutorial code   */
+    /*     border: 1px solid #e67e22; */
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+        /*   tutorial code   */
+/*     border: 1px solid #e67e22; */
+}
+
+.btn:hover,
+.btn:active{
+    background: #cf6d17;
+    color: #245563;
+}
+
+.btn-sign,
+input[type=submit]{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    background-color: #dd9530;
+    color: white;
+    transition: background-color 0.5s;
+}
+
+.btn-sign:hover,
+.btn-sign:active,
+input[type=submit]:hover,
+input[type=submit]:active
+{
+    background-color: white;
+    border: #dd9530 solid 2px;
+    color: #dd9530;
+}
+
+
+
+/* ----------------------------------------- */
+/* HEADER */
+/* ------------------------------------------ */
+
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/resources/images/foods/header.jpg");
+    height: 100vh;
+    background-size: 100%;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-text-box{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.logo{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    padding: 8px 0;
+    color:white;
+    text-decoration: none;
+    font-size: 90%;
+    border-bottom: 2px transparent;
+    transition: border-bottom 0.5s;
+
+    /*   tutorial code   */
+/*     text-transform: uppercase; */
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #de7519;
+}
+
+
+
+
+
+/* -------MEALS-------- */
+.section-meals{
+    padding: 0;
+}
+
+
+.meals-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.meals-showcase li{
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo2{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.meal-photo2 img{
+    opacity: 0.7;
+    width: 100%;
+    height: 350px;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+
+}
+
+.meal-photo2 img:hover{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* .meals-showcase img{
+    height: 200px;
+    width: 300px;
+    margin: 0px;
+} */
+
+
+
+
+/* -------HOW IT WORKS-------- */
+
+.section-steps{
+    background-color: #f4f4f4;
+}
+
+
+
+.steps-box:first-child{
+   text-align: right;
+   padding-right: 3%;     
+   margin-top: 30px;
+}
+
+.steps-box:last-child{
+    padding-left: 3%;
+    margin-top: 70px;
+    
+}
+
+.app-screen{
+    height: 60%;
+    width: 50%;   
+}
+
+
+.btn-app img{
+    height: 8%;
+    width: 40%;
+    padding-right: 5%;
+}
+
+.works-step{
+    margin-bottom: 50px;
+}
+
+.works-step:last-of-type{
+    margin-bottom: 80px;
+}
+
+.works-step div{
+     color: #F5AB35;
+    border: 2px solid #F5AB35;
+    display: inline-block;
+    border-radius: 50%;
+    height: 50px;
+    width: 55px;
+    text-align: center;
+    font-size: ;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+    
+}
+
+
+/* --------------------------- */
+/* Cities */
+/* --------------------------- */
+.box img{
+    height: auto;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.city-feature{
+    margin-bottom: 12px;
+}
+
+
+
+/* --------------------------- */
+/* Testimonials*/
+/* --------------------------- */
+
+.section-testimonials{
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("/resources/css/images/back-customers.jpg");
+    background-size: cover;
+    color: white;
+    background-attachment: fixed;
+}
+
+blockquote{
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote:before{
+    content: "\201C";
+    font-size: 500%;
+    font-weight: 200%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+cite{
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+    
+}
+
+cite img{
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;   
+}
+
+
+/* --------------------------- */
+/*Plans*/
+/* --------------------------- */
+
+.section-plans{
+    background-color: #f4f4f4;
+}
+
+.plan-box{
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 0 2px 2px #efefef;
+}
+
+.plan-box div{
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+    
+}
+
+.plan-box div:first-child{
+    background-color: #f7f7f7;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child{
+    text-align: center;
+    border: 0;
+}
+
+.plan-price{
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #dd9530;
+}
+.plan-price span{
+    font-size: 30%;
+    font-weight: 300;
+}
+
+.plan-price-meal{
+    font-size: 80%;
+}
+.plan-box i{
+    font-size: 13px;
+    padding-right: 10px;
+}
+
+.section-plans ul{
+    list-style: none;
+/*     padding-bottom: 15; */
+}
+.section-plans ul li{
+    padding: 5px 0px;
+}
+/* 
+.section-plans h3, .section-plans li, .section-plans p{
+    font-size: 25;
+    padding-bottom: 5;
+}
+
+
+ */
+
+
+/* --------------------------- */
+/*Form*/
+/* --------------------------- */
+
+.contact-form{
+    width: 60%;
+    margin: 0, auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea{
+    width: 100%;
+    padding 70x;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea{
+    height: 100px;
+}
+input[type=checkbox]{
+    margin: 10px 5px 10px 0;
+}
+
+*:focus{
+    outline: none;
+}
+
+
+/* --------------------------- */
+/*Footer*/
+/* --------------------------- */
+
+footer{
+    background-color:#282828;
+    padding: 2%;
+/*     font-size: 80%; */
+}
+
+.footer-nav{
+    list-style: none;
+/*     float: left; */
+/*     padding-bottom: 2%; */
+
+}
+
+
+.social-icons{
+    list-style: none;
+    padding-left: 60%;
+/*     float: right;     */
+/*     padding-bottom: 2%; */
+}
+
+.footer-nav li,
+.social-icons li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav, a
+.social-icons, a{
+    text-decoration: none;
+}
+
+.footer-nav li:last-child,
+.social-icons li:last-child{
+    margin-right: 0;
+}
+
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-icons li a:link, 
+.social-icons li a:visited{
+    color: #888;
+}
+
+
+.social-icons a:links,
+.social-icons a:visited{
+    font-size: 200%;
+}
+
+.fa-facebook-square,
+.fa-twitter,
+.fa-google-plus-g,
+.fa-instagram {
+    transition: color: 0.10s;
+}
+
+.fa-facebook-square:hover{
+    color: #3b5998;
+}
+
+.fa-twitter:hover{
+    color: #1da1f2;
+}
+
+.fa-google-plus-g:hover{
+    color: #db4437;
+}
+
+.fa-instagram:hover{
+    color: #c32aa3;
+}
+
+footer p{
+    color: #888;
+    text-align: center;
+    font-size: 90%;
+    margin-top: 40px;
+}
+
+
